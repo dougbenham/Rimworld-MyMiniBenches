@@ -1,0 +1,10 @@
+<?xml version="1.0" encoding="utf-8"?>
+<ModMetaData>
+	<name>My Mini Benches</name>
+	<packageId>Doug.MyMiniBenches</packageId>
+	<author>Doug</author>
+	<supportedVersions>
+		<li>1.5</li>
+	</supportedVersions>
+	<description/>
+</ModMetaData>

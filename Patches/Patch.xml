@@ -1,0 +1,49 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<Patch>
+
+	<Operation Class="PatchOperationReplace">
+	  <xpath>/Defs/ThingDef[defName = "FabricationBench"]/size</xpath>
+	  <value><size>(1,1)</size></value>
+	</Operation>
+
+	<Operation Class="PatchOperationReplace">
+	  <xpath>/Defs/ThingDef[defName = "FabricationBench"]/graphicData/drawSize</xpath>
+	  <value>
+        <drawSize>(1.5,1.5)</drawSize>
+	  </value>
+	</Operation>
+
+	<Operation Class="PatchOperationReplace">
+	  <xpath>/Defs/ThingDef[defName = "SubcoreEncoder"]/size</xpath>
+	  <value><size>(1,1)</size></value>
+	</Operation>
+
+	<Operation Class="PatchOperationReplace">
+	  <xpath>/Defs/ThingDef[defName = "SubcoreEncoder"]/graphicData/drawSize</xpath>
+	  <value>
+        <drawSize>(1,1)</drawSize>
+	  </value>
+	</Operation>
+
+	<Operation Class="PatchOperationRemove" MayRequire="Mlie.TinyWorkbenchs">
+	  <xpath>/Defs/ThingDef[@Name = "TWB_MiniBenchBase" or defName = "TWB_HandTailoringBenchMini"]/statBases/WorkTableWorkSpeedFactor</xpath>
+	</Operation>
+
+	<Operation Class="PatchOperationReplace" MayRequire="WexMan.Mines">
+	  <xpath>/Defs/ThingDef[defName = "Mine"]/size</xpath>
+	  <value><size>(1,1)</size></value>
+	</Operation>
+
+	<Operation Class="PatchOperationReplace" MayRequire="WexMan.Mines">
+	  <xpath>/Defs/ThingDef[defName = "Mine"]/interactionCellOffset</xpath>
+	  <value><interactionCellOffset>(0,0,-1)</interactionCellOffset></value>
+	</Operation>
+
+	<Operation Class="PatchOperationReplace" MayRequire="WexMan.Mines">
+	  <xpath>/Defs/ThingDef[defName = "Mine"]/graphicData/drawSize</xpath>
+	  <value>
+        <drawSize>(1.5,1.5)</drawSize>
+	  </value>
+	</Operation>
+
+</Patch>
