@@ -29,8 +29,15 @@
 			<li>Tiny Workbenchs</li>
 			<li>Tiny Workbenchs (Continued)</li>
 		</mods>
-		<match Class="PatchOperationRemove">
-			<xpath>/Defs/ThingDef[@Name = "TWB_MiniBenchBase" or defName = "TWB_HandTailoringBenchMini"]/statBases/WorkTableWorkSpeedFactor</xpath>
+		<match Class="PatchOperationSequence">
+			<operations>
+				<li Class="PatchOperationRemove">
+					<xpath>/Defs/ThingDef[@Name = "TWB_MiniBenchBase" or @ParentName = "TWB_MiniBenchBase"]/statBases/WorkTableWorkSpeedFactor</xpath>
+				</li>
+				<li Class="PatchOperationRemove">
+					<xpath>/Defs/ThingDef[@Name = "TWB_MiniBenchBase" or @ParentName = "TWB_MiniBenchBase"]/statBases/ResearchSpeedFactor</xpath>
+				</li>
+			</operations>
 		</match>
 	</Operation>
 	<Operation Class="PatchOperationFindMod">
